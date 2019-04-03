@@ -25,7 +25,7 @@ Vue.component('section-slider', {
     },
     computed: {
         picSrc: function () {
-            return "./assets/images/" + this.index + ".JPG";
+            return "./assets/images/" + this.index + ".jpg";
         }
     },
     methods: {
@@ -43,7 +43,7 @@ Vue.component('section-slider', {
                     this.index--;
         },
         itemSrc: function (item) {
-            return "./assets/images/" + item + ".JPG";
+            return "./assets/images/" + item + ".jpg";
         }
     }
 });
