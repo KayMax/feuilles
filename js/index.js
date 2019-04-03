@@ -11,11 +11,16 @@ Vue.component('section-slider', {
         '<div class="slider-control previous" @click="prePic"><i class="fa fa-angle-left" aria-hidden="true"></i></div>' +
         '<div class="slider-control next" @click="nextPic"><i class="fa fa-angle-right"></i></div></div>' +
         '</div>' +
+        '<div class="section-slider-nav" v-if="false">' +
+        '<div v-for="(item,key) in item_arr" :key="key" class="slider-nav" :class="{\'active\':index==item,\'not-hover\':hover_item&&hover_item!=index}" @mouseover="hover_item=item" @mouseleave="hover_item=0">' +
+        '<img :src="itemSrc(item)"></div></div>' +
         '</div>',
     data: function () {
         return {
-            total: 20,
+            total: 21,
             index: 1,
+            item_arr:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21],
+            hover_item: 0
         }
     },
     computed: {
@@ -36,6 +41,9 @@ Vue.component('section-slider', {
                     this.index = this.total;
                 else
                     this.index--;
+        },
+        itemSrc: function (item) {
+            return "./assets/images/" + item + ".JPG";
         }
     }
 });

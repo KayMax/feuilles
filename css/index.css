@@ -87,7 +87,7 @@ a,a:hover,a:active,a:visited{
 .section-slider-bg{
     width: 100%;
     height: 100%;
-    opacity: 0.65;
+    opacity: 0.5;
     overflow: hidden;
     color: transparent;
     transition: opacity 0.4s;
@@ -99,4 +99,31 @@ a,a:hover,a:active,a:visited{
     transform: translate(-50%, -50%);
     width: 120%;
     height: 120%;
+}
+.section-slider-nav{
+    width: 1020px;
+    margin: auto;
+    height: 60px;
+}
+.slider-nav{
+    float: left;
+    width: 46px;
+    height: 100%;
+    border: 1px solid #f00;
+    text-align: center;
+    background-color: #ddd;
+    cursor: pointer;
+    overflow: hidden;
+    transition: width .15s;
+}
+.slider-nav:hover,.slider-nav.active{
+    width: 96px;
+}
+.slider-nav.active.not-hover{
+    width: 46px;
+}
+.slider-nav img{
+    height: 100%;
+    width: auto;
+    vertical-align: middle;
 }
